@@ -14,32 +14,32 @@ const emails = [
     'myemail6@gmail.com',
 ];
 
-console.log(emails);
-
 const loginButton = document.getElementById('login-button');
 
 loginButton.addEventListener('click',
-    function(event){
-
-        //event.defaultPrevented()
+    function(){
 
         const userEmail = document.getElementById('email-input').value;
-
-        console.log(userEmail)
+        let userEmailFound = false;
 
         for (let i = 0; i < emails.length; i++) {
-            const element = emails[i];
-
-            if(userEmail == emails[i]){
-                console.log('APROVATO')
-            }
-              else {
-                console.log('NON APROVATO')
-              }
-            
+            if(userEmail === emails[i]){
+                userEmailFound = true;
+            }      
         }
 
+        if (userEmailFound) {
+            alert('APPROVED');
+        } else {
+            alert('NOT APPROVED');
+        }
     }
 )
+
+            
+        
+
+    
+
 
 
