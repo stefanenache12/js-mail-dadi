@@ -1,4 +1,40 @@
-main {
-    width: 100%;
-    height: 100vh;
+body {
+    background-color: darkslateblue;
 }
+
+.mycontainer {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.mycontainer .user-number,.pc-number {
+    height: 7.5rem;
+    width: 7.5rem;
+    border: 2px solid white;
+    margin: 2.5rem;
+    border-radius: .625rem;
+}
+
+h1 {
+    line-height: 7.5rem;
+    min-height: 7.5rem;
+}
+
+.rotate-animation {
+    animation: rotate 1s 1;
+    transform-origin: center;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(1800deg);
+    }
+  }
