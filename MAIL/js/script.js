@@ -1,8 +1,8 @@
-// 1- Chiedi al utente la mail con un form di tipo text
+// 1- Chiedi al utente la mail con un input di tipo email
 // 2- Controlla che nella lista delle mail ci sia anche la mail inserita dal utente
 // 3- In base alla mail inserita
-//          - SE è presente nella lista delle mail stampa un messagio con Aprovato
-//          - ALTRIMENTI stampa Non Aprovato
+//          - SE è presente nella lista delle mail stampa un messagio con REGISTRATO
+//          - ALTRIMENTI stampa NON REGISTRATO
 
 
 const emails = [
@@ -20,18 +20,18 @@ loginButton.addEventListener('click',
     function(){
 
         const userEmail = document.getElementById('email-input').value;
-        let userEmailFound = false;
+        let userEmailFound = false; // DI BASE IL VALORE DI userEmailFound E FALSO
 
         for (let i = 0; i < emails.length; i++) {
             if(userEmail === emails[i]){
-                userEmailFound = true;
-            }      
+                userEmailFound = true; // UNA VOLTA CHE LA CONDIZIONE TROVA 
+            }                          //   LA MAIL NELLA ARAY userEmailFound DIVENTA VERO 
         }
 
-        if (userEmailFound) {
-            alert('APPROVED');
+        if (userEmailFound == true) {  // IN BASE A userEmailFound POSSO STAMPARE 
+            alert('REGISTRATO');        //  REGISTRATO O NON REGISTRATO
         } else {
-            alert('NOT APPROVED');
+            alert('NON REGISTRATO');
         }
     }
 )
